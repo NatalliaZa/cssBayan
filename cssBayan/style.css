@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+}
+summary{
+    list-style: none;
+    
+}
+h1{
+    padding: 2%;
+    font-size: 46px;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.accordion{
+    width: 50vw;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 1%;
+    overflow: hidden;
+}
+.accordion__item {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.accordion__title {
+    font-size: 40px;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s all;
+    padding: 1% 40% 1% 2%;
+    position: relative;
+}
+.accordion__title:hover{
+    background-color: rgb(239, 241, 247);
+}
+.accordion__title::after{
+    display: block;
+    content: "✚";
+    font-size: 24px;
+    position: absolute;
+    right: 1%;
+    top:50%;
+    transform: translateY(-90%);
+    transition: 0.3s all;
+}
+
+.accordion__item[open] .accordion__title::after{
+    transform: translateY(-90%) rotate(45deg);
+}
+.accordion__body {
+    padding: 2%;
+}
+
+@media (max-width: 320px) {
+    .accordion__title{
+        font-size: 40px;
+    }
+
+}
+@media (max-width: 820px) {
+    .accordion__title{
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 1080px) {
+    .accordion__title{
+        font-size: 24px;
+    }
+
+}
