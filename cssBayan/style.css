@@ -65,6 +65,10 @@ img{
 .accordion__body {
     padding: 2%;
     cursor: pointer;
+    transition: 0.3s all;
+}
+.accordion__body:hover{
+    opacity: 0.5;
 }
 
 @media (max-width: 320px) {
